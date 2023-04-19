@@ -2,6 +2,9 @@ package com.example.minesweeper3;
 
 import javafx.scene.control.Button;
 
+/**
+ *
+ */
 public class Casilla extends Button {
 
     private int filas;
@@ -12,15 +15,16 @@ public class Casilla extends Button {
 
     private boolean Casilla_visible;
     private int minas_Adyacentes;
-    public boolean descubrir;
+    //public boolean descubrir;
 
     private boolean Abierta;
 
-    private boolean tieneBomba;
 
-    public boolean isDescubrir(){
-        return descubrir;
-    }
+    /**
+     * Constructor:
+     * @param fila
+     * @param columna
+     */
 
     public Casilla(int fila, int columna){
         this.filas = 8;
@@ -33,53 +37,55 @@ public class Casilla extends Button {
 
     }
 
-    public int getFila(){
-        return filas;
-    }
-
-    public void setFila(int fila){
-        this.filas = fila;
-    }
-
-    public int getColumna(){
-        return columnas;
-    }
-
-
-    public void setMina_oculta(Boolean oculta){
-        mina_oculta = oculta;}
-
-    public void setDescubrir(boolean descubrir){
-        this.descubrir = descubrir;
-    }
-
-    public void descubrir() {
-        descubrir = descubrir;
-    }
+    /**
+     *
+     */
 
     public void colocarBomba(){
 
-        this.tieneBomba = true;
+        this.esMina = true;
     }
+
+    /**
+     *
+     * @return
+     */
 
     public boolean hay_Mina() {
 
         return this.esMina;
     }
 
+    /**
+     *
+     * @return
+     */
+
     public int getMinas_Adyacentes(){
         return minas_Adyacentes;
     }
 
-
+    /**
+     *
+     * @param minas_adyacentes
+     */
 
     public void setMinas_Adyacentes(int minas_adyacentes){
         this.minas_Adyacentes = minas_adyacentes;
     }
 
+    /**
+     *
+     * @return
+     */
+
     public boolean isAbierta() {
         return this.Abierta;
     }
+
+    /**
+     *
+     */
 
     public void abrirCasilla() {
         this.Abierta = true;
